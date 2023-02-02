@@ -1,0 +1,100 @@
+conky.config = {
+	background = true,
+	use_xft = true,
+	font = 'C dans l air:size=10',
+	xftalpha = 0.5,
+	update_interval = 1.0,
+	total_run_times = 0,
+	own_window = true,
+        own_window_transparent = true,
+        own_window_argb_visual = true,
+        own_window_type = 'normal',
+	own_window_hints = 'undecorated, below, skip_taskbar, skip_pager, sticky',
+	double_buffer = true,
+	minimum_width = 300, minimum_height = 5,
+	maximum_width = 300, 
+	draw_shades = true,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = true,
+	default_color = '#ffffff',
+	default_shade_color = '#757575',
+	default_outline_color = '#000000',
+	alignment = 'top_right',
+	gap_x = 40,
+	gap_y = 40,
+	no_buffers = true,
+	uppercase = false,
+	cpu_avg_samples = 4,
+	override_utf8_locale = true,
+};
+
+conky.text = [[
+#${color #e49c16}${font c dans l'air:style=Bold:size=16}___________________________ ${font}${color}
+${color #e49c16}${font c dans l'air:style=Bold:size=16}Système ${font}${color}
+${color #e49c16}${font c dans l'air:style=Bold:size=16}‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ ${font}${color}
+${color #e49c16}Linux ${color} $alignr ${texeci 900 cat /etc/fedora-release}
+${color #e49c16}Kernel${color}  $alignr $kernel
+${color #e49c16}Démarré depuis ${color} ${alignr} $uptime
+
+${color #e49c16}Batterie ${color} ${alignr} ${battery_time} - ${battery_percent}% 
+${battery_bar} 
+
+#${color #e49c16}${font c dans l'air:style=Bold:size=16}___________________________ ${font}${color}
+${color #e49c16}${font c dans l'air:style=Bold:size=16}Processeurs  
+${color #e49c16}${font c dans l'air:style=Bold:size=16}‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ ${font}${color}
+${font}${color}$alignr ${font Weather:style=Bold:size=10}${font} 
+${color #e49c16}Intel® Core™ i7 8Xcores @ 1.30GHz ${color}
+
+${color #e49c16}CPU0 ${cpu cpu0}% ${color} ${cpubar cpu0} 
+${color #e49c16}CPU1 ${cpu cpu1}% ${color} ${cpubar cpu1}
+${color #e49c16}CPU2 ${cpu cpu2}% ${color} ${cpubar cpu2}
+${color #e49c16}CPU3 ${cpu cpu3}% ${color} ${cpubar cpu3}
+${color #e49c16}CPU4 ${cpu cpu4}% ${color} ${cpubar cpu4}
+${color #e49c16}CPU1 ${cpu cpu5}% ${color} ${cpubar cpu5}
+${color #e49c16}CPU2 ${cpu cpu6}% ${color} ${cpubar cpu6}
+${color #e49c16}CPU3 ${cpu cpu7}% ${color} ${cpubar cpu7}
+
+${color #e49c16}Nom $alignr PID      $alignr CPU    $alignr    MEM${color}
+${color #ff5d5d} ${top name 1} $alignr ${top pid 1}   $alignr ${top cpu 1}    $alignr ${top mem 1}
+${color #fc8014} ${top name 2} $alignr ${top pid 2}   $alignr ${top cpu 2}    $alignr ${top mem 2}
+${color #e49c16} ${top name 3} $alignr ${top pid 3}   $alignr ${top cpu 3}    $alignr ${top mem 3}
+${color #e49c16} ${top name 4} $alignr ${top pid 4}   $alignr ${top cpu 4}    $alignr ${top mem 4}
+${color #e49c16} ${top name 4} $alignr ${top pid 5}   $alignr ${top cpu 5}    $alignr ${top mem 5}
+
+#${color #e49c16}${font c dans l'air:style=Bold:size=16}___________________________ ${font}${color}
+${color #e49c16}${font c dans l'air:style=Bold:size=16}Mémoire ${font}${color}
+${color #e49c16}${font c dans l'air:style=Bold:size=16}‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ ${font}${color}
+${color #e49c16}Ram ${color} $alignc $mem / $memmax $alignr $memperc%
+$membar
+${color #e49c16}Swap ${color} $alignc $swap / $swapmax $alignr $swapperc%
+$swapbar
+
+#${color #e49c16}${font c dans l'air:style=Bold:size=16}___________________________ ${font}${color}
+${color #e49c16}${font c dans l'air:style=Bold:size=16}disque dur${font}${color} $alignr ${font Weather:style=Bold:size=10}z${font}
+${color #e49c16}${font c dans l'air:style=Bold:size=16}‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ ${font}${color}
+${color #e49c16}${font c dans l'air:style=Bold:size=10}nvme ${font}${color} $alignr ${font Weather:style=Bold:size=10}z${font}
+${fs_used /} / ${fs_size /} $alignr ${fs_free_perc /}% libre
+${fs_bar /}
+${if_mounted /run/media/julien/DocsSDCard}${color #e49c16}${font c dans l'air:style=Bold:size=10}carte SD${font}${color}
+${fs_used /run/media/julien/DocsSDCard} / ${fs_size /run/media/julien/DocsSDCard} $alignr ${fs_free_perc /run/media/julien/DocsSDCard}% libre
+${fs_bar /run/media/julien/DocsSDCard} {else}DocsSDCard non monté${endif}${color #505053}${font c dans l'air:style=Bold:size=16} #Processus${font}${color} ${alignr}${color #505053}$processes${color} en cours
+
+#${color #e49c16}${font c dans l'air:style=Bold:size=16}___________________________ ${font}${color}
+${color #e49c16}${font c dans l'air:style=Bold:size=16}Réseau  ${font}${color}
+${color #e49c16}${font c dans l'air:style=Bold:size=16}‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ ${font}${color}
+${color #e49c16}Wifi ${color} $alignr ${wireless_essid wlp0s20f3} @ ${wireless_bitrate wlp0s20f3}
+${color #e49c16}Qualité ${color} $alignr ${wireless_link_qual_max wlp0s20f3} %
+${color #e49c16}IP locale ${color} $alignr ${addr wlp0s20f3}
+${color #e49c16}IP publique  ${color} $alignr ${texeci 3600 wget http://checkip.dyndns.org -O - -o /dev/null | cut -d : -f 2 | cut -d \< -f 1}
+${color #e49c16}${font Arrows:style=Bold:size=10}Down${font}${color} ${downspeedf wlp0s20f3} kb/s${goto 250}${color #e49c16}${font Arrows:style=Bold:size=10}Up${font}${color} ${upspeedf wlp0s20f3} kb/s
+${upspeedgraph wlp0s20f3 8,150 cc0000 e49c16} $alignr${downspeedgraph wlp0s20f3 8,150 cc0000 e49c16}
+
+${color #e49c16}Ethernet ${color}
+${color #e49c16}IP locale ${color} $alignr ${addr enp0s13f0u1u2}
+${color #e49c16}IP publique  ${color} $alignr ${texeci 3600 wget http://checkip.dyndns.org -O - -o /dev/null | cut -d : -f 2 | cut -d \< -f 1}
+${color #e49c16}${font Arrows:style=Bold:size=10}Down${font}${color} ${downspeedf enp0s13f0u1u2} kb/s${goto 250}${color #e49c16}${font Arrows:style=Bold:size=10}Up${font}${color} ${upspeedf enp0s13f0u1u2} kb/s
+${upspeedgraph enp0s13f0u1u2 8,150 cc0000 e49c16} $alignr${downspeedgraph enp0s13f0u1u2 8,150 cc0000 e49c16}
+
+]];
+

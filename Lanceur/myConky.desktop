@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/conky 
+Name=Conky
+Comment=Afficher Conky sur le bureau
+X-GNOME-Autostart-enabled=true
