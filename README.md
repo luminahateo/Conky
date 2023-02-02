@@ -1,12 +1,6 @@
-```rust  
-    __  ___      ______         __                        
-   /  |/  __  __/ _______  ____/ ____  _________ _        
-  / /|_/ / / / / /_  / _ \/ __  / __ \/ ___/ __ `/        
- / /  / / /_/ / __/ /  __/ /_/ / /_/ / /  / /_/ /         
-/_/  /_/\__, /_/    \___/\__,_/\____/_/   \__,_/ 
-       ___/ /
-     /_____/
-```
+![logoFedora](https://flatpak.org/img/distro/fedora-e2366c83.svg)
+![logoPopOS](https://flatpak.org/img/distro/pop-os-1f7fb214.svg)
+
 **Conky** avec     **Fedora WS** ***33&34***
           et sous  **Fedora i3** ***33>35*** & ***Pop_OS***
 
