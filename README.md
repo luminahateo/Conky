@@ -3,17 +3,20 @@
 
 
 **Conky** avec     **Fedora WS** ***33&34***
-          et sous  **Fedora i3** ***33>35*** & ***Pop_OS***   
+          et sous  **Fedora i3** ***33>35*** & ***Pop_OS*** ***20.04***  
   
 /!\ Ne fonctionne pas sous Gnome 40,41,42 ...   
   
 
 Exemple du thème Basic:  
-![Basic](https://github.com/luminahateo/MyConky/blob/main/AttachReadME/PreviewBasic.png)  
+![Basic](AttachReadME/PreviewBasic.png)  
   
 thème Aqua:  
-![Aqua](https://github.com/luminahateo/MyConky/blob/main/AttachReadME/previewAqua.png)
+![Aqua](AttachReadME/previewAqua.png)
   
 thème Red:  
-![Red](https://github.com/luminahateo/MyConky/blob/main/AttachReadME/previewRed.png)  
+![Red](AttachReadME/previewRed.png)  
+
+thème Pop_OS:  
+![Cosmic](AttachReadME/cosmic.png)
 

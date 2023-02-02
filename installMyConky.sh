@@ -12,6 +12,7 @@ echo "
 | 1 | Basic
 | 2 | Aqua
 | 3 | Rouge
+| 4 | Cosmic
 | Q | Exit
 "
 
@@ -27,6 +28,10 @@ elif [ "$choixColor" = "2" ]; then
 elif [ "$choixColor" = "3" ]; then
   cp ColorConky/conkyrc_red ~/
   mv ~/conkyrc_red ~/.conkyrc
+  install=1
+elif [ "$choixColor" = "4" ]; then
+  cp ColorConky/conkyrcCosmic ~/
+  mv ~/conkyrcCosmic ~/.conkyrc
   install=1
 else
   echo "
